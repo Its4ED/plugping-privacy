@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for Game IntBoost, an Android gaming utility by its4ED.">
+<title>Privacy Policy | Game IntBoost</title>
+<style>
+:root{color-scheme:light dark}*{box-sizing:border-box}body{margin:0;padding:0;background:#f7f7fa;color:#181720;font:16px/1.72 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:820px;margin:56px auto 80px;padding:44px 52px;background:white;border-radius:24px;box-shadow:0 4px 35px #0f102008}h1{font-size:31px;letter-spacing:-.7px;line-height:1.2;margin:0 0 24px}h2{font-size:19px;letter-spacing:-.25px;margin:36px 0 12px;line-height:1.35}p{margin:12px 0;color:#33343e}li{margin:8px 0;color:#33343e}ul{padding-left:24px}strong{color:#171720}a{color:#6e38c9;text-decoration:underline;text-underline-offset:3px}code{font-size:.95em;padding:.12em .35em;background:#f1eff9;border-radius:5px}main>p:nth-of-type(-n+4){color:#555365}footer{font-size:13px;color:#777;text-align:center;margin:16px}@media(max-width:850px){main{margin:0;max-width:none;border-radius:0;padding:28px 20px 70px;box-shadow:none}h1{font-size:27px}h2{font-size:19px}body{background:#fff}}@media(prefers-color-scheme:dark){body{background:#0e0d14;color:#f9f8fc}main{background:#191720;box-shadow:none}p,li{color:#d5d1dd}strong{color:white}code{background:#2d2839}main>p:nth-of-type(-n+4){color:#d2cddb}a{color:#be94ff}}</style>
+</head>
+<body>
+<main>
+<h1>Privacy Policy — Game IntBoost</h1>
+<p><strong>Effective date:</strong> 26 October 2026<br />
+<strong>App:</strong> Game IntBoost (<code>com.its4ed.gamebooster</code>)<br />
+<strong>Developer:</strong> its4ED<br />
+<strong>Privacy contact:</strong> <a href="mailto:foridulislammenhaj@gmail.com">foridulislammenhaj@gmail.com</a></p>
+<h2>1. Overview</h2>
+<p>Game IntBoost is an Android gaming utility that helps users launch their installed games and optionally restrict other apps' internet access during a game session. It uses Android's local VPN interface as an on-device firewall. It is <strong>not</strong> a commercial VPN, proxy, or remote traffic-routing service.</p>
+<p>Game IntBoost does not require an account. In the version covered by this policy (v1.8.6), it does not include advertising or analytics SDKs, operate developer-controlled servers, or send your app-usage records, preferences, or VPN traffic to the developer.</p>
+<h2>2. Information accessed and used on your device</h2>
+<p>To deliver its features, Game IntBoost may access and process the following information <strong>locally on your device</strong>:</p>
+<ul>
+<li><strong>Installed apps and games:</strong> App names, package identifiers, icons, game categories, and launch availability. This allows the app to display the game library and choose which apps may use the internet during a gaming session.</li>
+<li><strong>App usage activity (with your permission):</strong> Android's Usage Access data, including when apps were last used and foreground/background activity events. This is used to display recent games and estimated play-time charts, detect when a game has been exited, and automatically end a gaming session when possible. Android usage records may be incomplete, and the app does not claim to measure lifetime play time.</li>
+<li><strong>Selected settings and session records:</strong> Your game selections, allowed-app list, automatic-boost setting, display preferences, onboarding completion, latest game launch and time, and limited information about the status or end of a VPN session. These are stored locally so your preferences work across app launches.</li>
+<li><strong>Network status:</strong> Android reports when Wi-Fi or mobile connectivity becomes available or unavailable. The app uses this to observe network changes without automatically switching your internet route.</li>
+<li><strong>VPN packet data during an active session:</strong> When you enable game internet isolation, Android's <code>VpnService</code> interface delivers network packets from apps subject to the firewall into an on-device virtual network interface. Game IntBoost reads and discards these packets in memory to block their network access. It does not save packet contents, build browsing histories from them, or transmit those packets to the developer or a remote VPN endpoint. It may count discarded packets to show local session status.</li>
+</ul>
+<h2>3. How the local VPN and internet isolation work</h2>
+<p>When you start a game with automatic boosting enabled and approve Android's VPN request, Game IntBoost creates a <strong>local, non-forwarding VPN-based firewall</strong>. The active game and apps you explicitly allow are excluded from that VPN and use Android's normal network connections. Other eligible apps are routed to the local firewall, where their packets are discarded for the duration of the gaming session.</p>
+<p>This means the app can interrupt internet access for apps that you have not allowed while isolation is active. It does <strong>not</strong> send your browsing or game traffic through Game IntBoost servers, hide your IP address, encrypt the active game's connection, or promise lower latency. The selected game and allowed apps continue to communicate with their own services under those services' privacy practices.</p>
+<p>You can turn off automatic boosting, stop an active session, or revoke VPN permission through Android settings. Android generally permits only one active VPN at a time; using Game IntBoost's VPN may conflict with another VPN.</p>
+<h2>4. Permissions and Android services</h2>
+<p>Depending on the features you use, Game IntBoost may request:</p>
+<ul>
+<li><strong>VPN access:</strong> To create the local firewall when you start a protected game session. Android asks you to approve VPN access.</li>
+<li><strong>Usage Access:</strong> To detect app activity, maintain recent-game information, estimate weekly play time, and determine when a protected game is no longer in use. You enable or revoke this in Android settings.</li>
+<li><strong>Notifications:</strong> To show the status of an active game session and let you stop it from a notification, where supported and permitted.</li>
+<li><strong>Network state and internet permissions:</strong> To monitor connectivity and support the app's Android network functionality. These permissions do not mean app-usage data is uploaded.</li>
+<li><strong>Foreground service:</strong> To keep a user-initiated VPN firewall session operating while a game is active.</li>
+</ul>
+<p>Granting Usage Access or VPN permission is controlled by Android. You may decline these permissions, although features depending on them may not work correctly.</p>
+<h2>5. Collection, sharing, advertising, and analytics</h2>
+<p><strong>Game IntBoost does not transmit the information described above to developer-controlled servers.</strong> The v1.8.6 app does not contain a developer account system, advertising SDK, remote analytics SDK, or cloud backup feature. It does not sell your personal information or share locally processed app-usage information or VPN packet contents with advertisers or data brokers.</p>
+<p>When you open a game or an allowed app, that separate app may communicate directly with its own servers over your ordinary internet connection. Such communications are controlled by that app and are not collected or managed by Game IntBoost.</p>
+<p>Android and Google Play may independently process information associated with installing, updating, and operating apps under their own policies. That processing is separate from information collected by Game IntBoost's developer.</p>
+<h2>6. Local storage and retention</h2>
+<p>App preferences and the limited session journal are kept in Android's app-private storage until they are updated, you clear Game IntBoost's app data, or you uninstall the app. Temporary VPN packet buffers are used only during active sessions and are not retained as saved packet logs. The app does not maintain a developer-hosted database of users or their game activity.</p>
+<p>Game IntBoost reads usage records managed by the Android operating system; uninstalling Game IntBoost does not necessarily delete records that Android itself maintains.</p>
+<h2>7. Your choices and deletion</h2>
+<p>You can:</p>
+<ul>
+<li>Turn automatic boosting on or off and modify your allowed-app list within Game IntBoost.</li>
+<li>Stop an active VPN firewall session from the app or its session notification.</li>
+<li>Revoke Usage Access or VPN authorisation through Android settings.</li>
+<li>Clear the app's local data from Android <strong>Settings → Apps → Game IntBoost → Storage → Clear data</strong>, or uninstall the app to remove its app-managed local information.</li>
+</ul>
+<p>Because this version has no account or developer-hosted user database, there is no remote Game IntBoost account to delete.</p>
+<h2>8. Security</h2>
+<p>Game IntBoost uses Android's application sandbox and app-private storage for its local settings and session information. Restricted-app packets are handled in memory by the local VPN service and are not forwarded to a developer-operated endpoint. No system can guarantee absolute security; keep your Android device and installed apps updated.</p>
+<h2>9. Children's privacy</h2>
+<p>Game IntBoost is a general-purpose Android gaming utility and is not specifically designed for children. It does not request names, dates of birth, or account registration details from users. Parents and guardians should consider the device permissions and games used on a child's phone.</p>
+<h2>10. Changes to this policy</h2>
+<p>We may revise this policy if Game IntBoost's features, permissions, or data practices change. The updated version will be published at the same public policy location with a revised effective date. Material changes to data access or collection may also require an updated in-app disclosure or consent flow.</p>
+<h2>11. Contact</h2>
+<p>For questions about privacy or data handling in Game IntBoost, contact <strong>its4ED</strong> at <strong><a href="mailto:foridulislammenhaj@gmail.com">foridulislammenhaj@gmail.com</a></strong>.</p>
+
+</main>
+<footer>Game IntBoost · its4ED · Updated 26 October 2026</footer>
+</body>
+</html>
